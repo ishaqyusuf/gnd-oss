@@ -1,11 +1,14 @@
-import { db } from "@gnd/db";
-import { trpc } from "@/trpc/server";
+"use client";
+
+import { _trpc } from "@/components/static-trpc";
+import { useQuery } from "@gnd/ui/tanstack";
+
 export default async function Page() {
-  const x = await db.dealerAuth.count({});
-  const { data } = await trpc.user.auth.queryOption();
+  const { data } = useQuery(_trpc.user.auth.queryOptions());
+  //   const { data } = await qc.prefetchQuery(trpc.user.auth.queryOptions());
   return (
     <div>
-      {x}
+      {/* {x} */}
       <div>{data}</div>
     </div>
   );
