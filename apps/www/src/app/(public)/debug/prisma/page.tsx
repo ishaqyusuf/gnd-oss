@@ -2,7 +2,7 @@
 // import { useQuery } from "@gnd/ui/tanstack";
 
 import { db } from "@gnd/db";
-// import { Client } from "./client";
+import { Client } from "./client";
 
 export default async function Page() {
   //   const { data, isPending } = useQuery(_trpc.user.auth.queryOptions());
@@ -13,7 +13,7 @@ export default async function Page() {
     <div>
       {/* {x} */}
       <div>{r}</div>
-      {/* <Client /> */}
+      <Client />
     </div>
   );
 }
