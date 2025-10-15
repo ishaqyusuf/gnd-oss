@@ -5,4 +5,4 @@ export { type Prisma } from "@gnd/db";
 // export const Prisma = BasePrisma;
 
 export * from "@gnd/db";
-export const prisma = db;
+export { db as prisma }; //;///= db;
