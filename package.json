@@ -1,0 +1,47 @@
+{
+  "name": "nextjs-template",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "build:dashboard": "turbo build --parallel --filter !@gnd/jobs --filter  !@gnd/api --filter !@gnd/site",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:push": "turbo -F @gnd/db push",
+    "db:pull": "turbo -F @gnd/db pull",
+    "db:studio": "turbo -F @gnd/db studio",
+    "db:migrate": "turbo -F @gnd/db db-migrate",
+    "db:generate": "turbo -F @gnd/db prisma-generate",
+    "dev": "turbo dev --parallel",
+    "dev2": "turbo dev --parallel --filter !@gnd/jobs --filter  !@gnd/api --filter !@gnd/site",
+    "dev:dashboard": "turbo dev --parallel --filter !@gnd/jobs --filter  !@gnd/api --filter !@gnd/site",
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' ",
+    "typecheck": "turbo typecheck",
+    "--postinstall": "bun run check-deps",
+    "check-deps": "check-dependency-version-consistency .",
+    "gen": "turbo gen --config 'turbo/generators/config.ts'"
+  },
+  "dependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@manypkg/cli": "^0.24.0",
+    "turbo": "2.5.6",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@turbo/gen": "2.5.4",
+    "@types/node": "^24.7.2",
+    "check-dependency-version-consistency": "4.1.0",
+    "knip": "^5.61.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.2.16"
+}
