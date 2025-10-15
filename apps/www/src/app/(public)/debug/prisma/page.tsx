@@ -1,7 +1,7 @@
 // import { _trpc } from "@/components/static-trpc";
 // import { useQuery } from "@gnd/ui/tanstack";
 
-import { db } from "@gnd/db";
+import { db } from "@api/trpc/routers/_app";
 import { Client } from "./client";
 
 export default async function Page() {

@@ -7,12 +7,7 @@ import { useState } from "react";
 
 export function Client() {
   const [enabled, setEnabled] = useState(false);
-  const { data, isPending } = useQuery(
-    _trpc.user.auth.queryOptions(undefined),
-    {
-      enabled,
-    }
-  );
+  const { data, isPending } = useQuery(_trpc.user.auth.queryOptions(undefined));
   //   const { data } = await qc.prefetchQuery(trpc.user.auth.queryOptions());
   const r = JSON.stringify({ data, isPending });
   return (
