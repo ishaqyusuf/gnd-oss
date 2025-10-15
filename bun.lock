@@ -124,7 +124,7 @@
         "remark": "15.0.1",
         "remark-gfm": "4.0.0",
         "tailwindcss": "^3.4.15",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
         "unist-util-visit": "5.0.0",
       },
     },
@@ -244,7 +244,7 @@
         "tailwindcss-animate": "^1.0.7",
         "ts-results": "^3.3.0",
         "tus-js-client": "4.3.1",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
         "use-async-memo": "^1.2.5",
         "use-debounce": "^10.0.3",
         "use-deep-compare-effect": "^1.8.1",
@@ -422,7 +422,7 @@
         "@better-auth/cli": "1.3.7",
         "react": "19.1.0",
         "react-dom": "19.1.0",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/community": {
@@ -453,7 +453,7 @@
       },
       "devDependencies": {
         "prisma": "6.11.1",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/email": {
@@ -471,7 +471,7 @@
       },
       "devDependencies": {
         "@react-email/preview-server": "4.2.8",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/events": {
@@ -482,7 +482,7 @@
         "@vercel/functions": "^1.5.0",
       },
       "devDependencies": {
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/jobs": {
@@ -515,7 +515,7 @@
       },
       "devDependencies": {
         "@gnd/tsconfig": "workspace:*",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/printer": {
@@ -565,7 +565,7 @@
         "@gnd/utils": "workspace:*",
       },
       "devDependencies": {
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/tsconfig": {
@@ -645,14 +645,14 @@
         "autoprefixer": "^10.4.21",
         "react": "19.1.1",
         "react-dom": "19.1.1",
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
     "packages/utils": {
       "name": "@gnd/utils",
       "version": "1.0.0",
       "devDependencies": {
-        "typescript": "^5.9.2",
+        "typescript": "^5.9.3",
       },
     },
   },
