@@ -56,12 +56,12 @@ const config = {
   // experimental: {
   serverExternalPackages: ["puppeteer-core"],
   // },
-  // webpack: (config, { isServer }) => {
-  //     if (isServer) {
-  //         config.plugins = [...config.plugins, new PrismaPlugin()];
-  //     }
-  //     return config;
-  // },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.plugins = [...config.plugins, new PrismaPlugin()];
+    }
+    return config;
+  },
   // webpack: (
   //     config,
   //     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
