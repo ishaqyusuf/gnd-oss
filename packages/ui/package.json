@@ -106,6 +106,7 @@
     "./quantity-input": "./src/components/quantity-input.tsx"
   },
   "dependencies": {
+    "@gnd/utils": "workspace:*",
     "@hookform/resolvers": "^5.2.2",
     "@mui/icons-material": "^6.1.6",
     "@radix-ui/react-accordion": "^1.2.12",
