@@ -54,7 +54,7 @@
 }
 
 table#invoiceFooter tr {
-    @apply hover:bg-inherit !important;
+    @apply hover:bg-inherit;
 }
 
 #floatingFooter table th {
@@ -94,10 +94,10 @@ table.size-sm td {
 }
 
 .side-modal-rounded-h-content {
-    @apply h-screen sm:h-[calc(95vh)] lg:h-[calc(95vh-3vh)] !important;
+    @apply h-screen sm:h-[calc(95vh)] lg:h-[calc(95vh-3vh)];
 }
 .side-modal-rounded {
-    @apply flex flex-col max-sm:h-screen max-sm:overflow-hidden max-sm:p-0 lg:mx-4 lg:mt-[2.5vh] lg:h-[95vh] lg:rounded-xl !important;
+    @apply flex flex-col max-sm:h-screen max-sm:overflow-hidden max-sm:p-0 lg:mx-4 lg:mt-[2.5vh] lg:h-[95vh] lg:rounded-xl;
 }
 
 table.styled thead {
@@ -111,7 +111,7 @@ table.table-sm td {
 }
 table.styled tr,
 table.styled thead {
-    @apply border-b !important;
+    @apply border-b;
 }
 table.styled td.action {
     @apply flex items-center justify-end gap-2;
@@ -146,11 +146,8 @@ table.styled td.action {
 }
 .text-stroke {
     color: red;
-    text-shadow:
-        -1px 1px 0 rgb(99, 45, 45),
-        1px 1px 0 rgb(99, 45, 45),
-        1px -1px 0 rgb(99, 45, 45),
-        -1px -1px 0 rgb(99, 45, 45);
+    text-shadow: -1px 1px 0 rgb(99, 45, 45), 1px 1px 0 rgb(99, 45, 45),
+        1px -1px 0 rgb(99, 45, 45), -1px -1px 0 rgb(99, 45, 45);
 }
 input {
     @apply outline-none focus:outline-none;
