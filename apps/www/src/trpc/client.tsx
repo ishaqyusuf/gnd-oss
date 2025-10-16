@@ -32,7 +32,7 @@ function getQueryClient() {
 export function TRPCReactProvider(
     props: Readonly<{
         children: React.ReactNode;
-    }>,
+    }>
 ) {
     const queryClient = getQueryClient();
     const [trpcClient] = useState(() =>
@@ -48,7 +48,9 @@ export function TRPCReactProvider(
                     async headers() {
                         const auth = await authUser();
                         return {
-                            Authorization: `Bearer ${generateRandomString(16)}|${auth?.id}`,
+                            Authorization: `Bearer ${generateRandomString(
+                                16
+                            )}|${auth?.id}`,
                         };
                     },
                 }),
@@ -59,7 +61,7 @@ export function TRPCReactProvider(
                             opts.result instanceof Error),
                 }),
             ],
-        }),
+        })
     );
 
     return (
