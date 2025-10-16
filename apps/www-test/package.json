@@ -1,5 +1,5 @@
 {
-    "name": "@gnd/www",
+    "name": "@gnd/www-test",
     "version": "0.1.0",
     "private": true,
     "scripts": {
