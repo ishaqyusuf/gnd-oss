@@ -20,14 +20,15 @@ export default async function proxy(req: NextRequest) {
     // req.cookies.get
     // Get hostname of request (e.g. demo.vercel.pub, demo.localhost:3000)
     let hostname = req.headers.get("host");
-    const encodedSearchParams = `${newUrl?.pathname?.substring(1)}${newUrl.search}`;
+    const encodedSearchParams = `${newUrl?.pathname?.substring(1)}${
+        newUrl.search
+    }`;
     const searchParams = req.nextUrl.searchParams.toString();
     const path = `${newUrl.pathname}${
         searchParams.length > 0 ? `?${searchParams}` : ""
     }`;
     const pathName = req.nextUrl.pathname;
     const _authorized = await authorized(req);
-    console.log({ pathName });
 
     const auth = await getAuth(req);
 
@@ -41,6 +42,7 @@ export default async function proxy(req: NextRequest) {
     if (path === "/") {
         if (auth) {
             const link = getDefaultLink(auth);
+            console.log({ link });
             const url = new URL(link, req.url);
             return NextResponse.redirect(url);
         }
@@ -50,7 +52,7 @@ export default async function proxy(req: NextRequest) {
 }
 const isPublic = (pathName) =>
     ["/login", "/square-payment", "/api/pdf"]?.some((a) =>
-        pathName.includes(a),
+        pathName.includes(a)
     );
 async function authorized(req: NextRequest) {
     // const c = cookies();
@@ -68,7 +70,7 @@ async function authorized(req: NextRequest) {
         cache: "no-store",
     });
     const data = await response.json();
-    // console.log({ data });
+    console.log({ data });
     return !!data?.user;
 }
 async function getAuth(req) {
@@ -96,7 +98,7 @@ function getDefaultLink(auth) {
             role: auth.role,
             can: auth.can,
             userId: auth?.userId,
-        }),
+        })
     );
     return validLinks.defaultLink;
 }
