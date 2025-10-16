@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getLinkModules, validateLinks } from "./components/sidebar/links";
 import { cookies } from "next/headers";
+import { consoleLog } from "@gnd/utils";
 
 export const config = {
     matcher: [
@@ -42,7 +43,7 @@ export default async function proxy(req: NextRequest) {
     if (path === "/") {
         if (auth) {
             const link = getDefaultLink(auth);
-            console.log({ link });
+            consoleLog("LINK", { link });
             const url = new URL(link, req.url);
             return NextResponse.redirect(url);
         }
@@ -70,7 +71,7 @@ async function authorized(req: NextRequest) {
         cache: "no-store",
     });
     const data = await response.json();
-    console.log({ data });
+    consoleLog("AUTH_SESSION", { data });
     return !!data?.user;
 }
 async function getAuth(req) {
