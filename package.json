@@ -47,6 +47,8 @@
     "react-pdf": "^9.2.1",
     "react-hotkeys-hook": "^5.2.1",
     "react-responsive": "^9.0.2",
+    "nanoid": "^5.1.5",
+    "square": "^38.2.0",
     "zod": "^3.25.46"
   },
   "devDependencies": {
