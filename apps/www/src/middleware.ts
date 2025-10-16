@@ -16,7 +16,8 @@ export const config = {
     ],
 };
 
-export default async function proxy(req: NextRequest) {
+export default async function middleware(req: NextRequest) {
+    consoleLog("MIDDLEWARE", { url: req.url });
     const newUrl = req.nextUrl;
     // req.cookies.get
     // Get hostname of request (e.g. demo.vercel.pub, demo.localhost:3000)
