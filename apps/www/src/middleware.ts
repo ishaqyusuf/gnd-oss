@@ -71,7 +71,7 @@ async function authorized(req: NextRequest) {
         cache: "no-store",
     });
     const data = await response.json();
-    consoleLog("AUTH_SESSION", { data });
+    // consoleLog("AUTH_SESSION", { data });
     return !!data?.user;
 }
 async function getAuth(req) {
