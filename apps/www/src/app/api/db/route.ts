@@ -1,4 +1,4 @@
-import { prisma } from "@next16/db";
+import { db as prisma } from "@gnd/db";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
       data: {},
       error: "No query provided",
     });
-  const data = await prisma.user.count({});
+  const data = await prisma.users.count({});
   return NextResponse.json({
     data,
     error: null,

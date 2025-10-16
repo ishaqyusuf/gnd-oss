@@ -1,11 +1,8 @@
-import { prisma } from "@next16/db";
+import { db as prisma } from "@gnd/db";
 import Image from "next/image";
 
 export default async function Home() {
-  await prisma.user.create({
-    data: {},
-  });
-  const x = await prisma.user.findMany({
+  const x = await prisma.users.findMany({
     where: {
       deletedAt: null,
     },
