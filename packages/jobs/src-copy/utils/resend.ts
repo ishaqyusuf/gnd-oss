@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Resend } from "resend";
-import { render } from "@gnd/email/render";
+import { render } from "@react-email/render";
 import { getRecipient } from "@gnd/utils/envs";
 import { nanoid } from "nanoid";
 import { logger } from "@trigger.dev/core/v3";
@@ -13,7 +13,7 @@ interface SendEmailProps {
   subject: string;
   from: FromEmails;
   to: string | string[];
-  content;
+  content: ReactNode;
   successLog?: string;
   errorLog?: string;
   task: {
@@ -37,7 +37,7 @@ export async function sendEmail({
     headers: {
       "X-Entity-Ref-ID": nanoid(),
     },
-    html: render(content),
+    html: await render(content),
   });
   if (response.error) {
     logger.error(errorLog || "email failed to send", {

@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@gnd/db": "workspace:*",
-    "@gnd/utils": "workspace:*"
+    "@gnd/utils": "workspace:*",
+    "resend": "^4.6.0"
   },
   "devDependencies": {
     "@gnd/tsconfig": "workspace:*",
