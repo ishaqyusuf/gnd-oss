@@ -92,19 +92,10 @@ export const sendSalesEmail = schemaTask({
             content: SalesEmail({
               isQuote,
               pdfLink,
-              paymentLink,
+              paymentLink: paymentLink!,
               sales,
-              customerName,
+              customerName: customerName!,
             }),
-            // content: (
-            //   <SalesEmail
-            //     isQuote
-            //     pdfLink={pdfLink}
-            //     paymentLink={paymentLink!}
-            //     sales={sales}
-            //     customerName={customerName!}
-            //   />
-            // ),
             successLog: "Invoice email sent",
             errorLog: "Invoice email failed to send",
             task: {

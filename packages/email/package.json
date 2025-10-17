@@ -24,8 +24,7 @@
     "@react-email/render": "1.2.1",
     "@react-email/tailwind": "1.2.2",
     "date-fns": "^4.1.0",
-    "react": "19.1.1",
-    "react-email": "4.2.8",
+    "react-email": "4.0.16",
     "responsive-react-email": "^0.0.5"
   },
   "devDependencies": {
