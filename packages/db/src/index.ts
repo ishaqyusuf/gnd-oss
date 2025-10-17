@@ -115,15 +115,14 @@ type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>;
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClientSingleton | undefined;
-  db: PrismaClientSingleton | undefined;
+  // db: PrismaClientSingleton | undefined;
 };
 // globalForPrisma.prisma?.users.findMany({
 //   where: {
 
 //   }
 // })
-export const db =
-  globalForPrisma.prisma || globalForPrisma.db || prismaClientSingleton();
+export const db = globalForPrisma.prisma || prismaClientSingleton();
 export type Database = typeof db;
 export type TransactionClient = Parameters<
   Parameters<typeof db.$transaction>[0]
@@ -131,5 +130,5 @@ export type TransactionClient = Parameters<
 export type Db = typeof db;
 
 if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = globalForPrisma.db = db;
+  globalForPrisma.prisma = db;
 }
