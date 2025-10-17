@@ -30,8 +30,6 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@prisma/client": "6.17.1",
-    "@prisma/extension-accelerate": "^2.0.1",
     "@t3-oss/env-core": "^0.11.1",
     "date-fns": "^4.1.0",
     "react": "18.3.1",

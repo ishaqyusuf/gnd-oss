@@ -4,8 +4,6 @@
 
 // Solution for prisma edge: @link https://github.com/prisma/prisma/issues/22050#issuecomment-1821208388
 
-// import { withAccelerate } from "@prisma/extension-accelerate";
-
 import { PrismaClient, Prisma } from "@prisma/client";
 
 export {

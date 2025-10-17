@@ -23,7 +23,6 @@
     "camelcase-keys": "^9.1.3",
     "heic-convert": "1.2.4",
     "node-xlsx": "^0.24.0",
-    "@prisma/client": "^6.11.1",
     "@prisma/instrumentation": "^6.11.1"
   },
   "devDependencies": {
