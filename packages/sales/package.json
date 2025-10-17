@@ -32,6 +32,7 @@
   "dependencies": {
     "@gnd/ui": "workspace:*",
     "@gnd/utils": "workspace:*",
+    "@gnd/tsconfig": "workspace:*",
     "@react-pdf/renderer": "^4.3.0",
     "date-fns": "^4.1.0",
     "jose": "^6.0.11",
